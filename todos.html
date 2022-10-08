@@ -7,62 +7,73 @@
 </head>
 <body>
   <header>
-        <font size="13">TODOS</font>
+    <h1>TODOS</h1>
   </header>
-
-  <div class="test">
-    <button />&#10507;</button>
-    <textarea style="resize:none" rows="1" cols="23" placeholder="What needs to be done?"></textarea>
-  </div>
-
-
-    <li class="task1">
-      <label>
-        <b><input type="checkbox" name="task1">HTML</b>
-      </label>
-      <button height="100%" width="100%" />&#10006;</button>
-    </li>
-
-
-    <li class="task2">
-      <label>
-        <b><input type="checkbox" name="task2">CSS</b>
-        <button height="100%" width="100%" />&#10006;</button>
-      </label>
-    </li>
-
-
-    <li class="task3">
-      <label>
-        <b><input type="checkbox" name="task3">JS</b>
-        <button height="100%" width="100%" />&#10006;</button>
-      </label>
-    </li>
-
-
-    <li class="task4">
-      <label>
-        <b><input type="checkbox" name="task3">JS tools</b>
-        <button height="100%" width="100%" />&#10006;</button>
-      </label>
-    </li>
-
-  <footer>
-    <section>
-      <div class="bottom">
-        <label>4 items left</label>
-        <label class="all">
-          <input type="radio" name="command">All
-        </label>
-        <label class="active">
-          <input type="radio" name="command">Active
-        </label>
-        <label class="completed">
-          <input type="radio" name="command">Completed
-        </label>
-        <button name="clear">Clear completed</button>
+  <main class="todo-app_base">
+    <section class="todo-app_tasks">
+      <div class="new_task">
+        <button />Select all</button>
+        <input class="new_task" placeholder="What needs to be done?" aria-label="New task text"/>
       </div>
+      <ul class="todo-app_task-list tasks">
+        <li class="todo-app_task-item task-item">
+          <div class="task-item_view">
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: HTML"/>
+            <span class="task-item_text">HTML </span>
+            <button class="task-item_delete">Delete</button>
+          </div>
+          <div class="task-item_edit" hidden ="hidden">
+            <input type="text" class="task-item_input" value="HTML" aria-label="Edit task: HTML"/>
+          </div>
+        </li>
+        <li class="todo-app_task-item task-item">
+          <div class="task-item_view">
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: CSS"/>
+            <span class="task-item_text">CSS </span>
+            <button class="task-item_delete">Delete</button>
+          </div>
+          <div class="task-item_edit" hidden ="hidden">
+            <input type="text" class="task1_input" value="CSS" aria-label="Edit task: CSS"/>
+          </div>
+        </li>
+        <li class="todo-app_task-item task-item">
+          <div class="task-item_view">
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS"/>
+            <span class="task-item_text">JS </span>
+            <button class="task-item_delete">Delete</button>
+          </div>
+          <div class="task-item_edit" hidden ="hidden">
+            <input type="text" class="task-item_input" value="JS" aria-label="Edit task: JS"/>
+          </div>
+        </li>
+        <li class="todo-app_task-item task-item">
+          <div class="task-item_view">
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS tools"/>
+            <span class="task-item_text">JS tools </span>
+            <button class="task-item_delete">Delete</button>
+          </div>
+          <div class="task-item_edit" hidden ="hidden">
+            <input type="text" class="task-item_input" value="JS tools" aria-label="Edit task: JS tools"/>
+          </div>
+        </li>
+      </ul>
     </section>
-  </footer>
+
+    <footer class="todo-app_action-panel action-panel">
+      <span class="action-panel_counter-active-tasks">4 items left</span>
+      <span class="action-panel_view-mode view mode" role="radiogroup" aria-label="Select view mode">
+        <label for="all" class="view-mode_label">
+          <input type="radio" class="view-mode_button" id="all" name="command" value="all" checked>All
+        </label>
+        <label for="active" class="view-mode_label">
+          <input type="radio" class="view-mode_button" id="active" name="command" value="active">Active
+        </label>
+        <label for="completed" class="view-mode_label">
+          <input type="radio" class="view-mode_button" id="completed" name="command" value="completed">Completed
+        </label>
+      </span>
+      <button class="view-mode_clear-completed" value="Clear completed">Clear completed</button>
+    </footer>
+  </main>
 </body>
 </html>
