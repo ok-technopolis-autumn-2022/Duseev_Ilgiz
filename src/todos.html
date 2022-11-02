@@ -4,54 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>todos</title>
+  <link rel="stylesheet" href="style/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>TODOS</h1>
+  <div class="todo_app">
+  <header class="todo-app_header">
+    <h1>todos</h1>
   </header>
   <main class="todo-app_base">
     <section class="todo-app_tasks">
       <div class="new_task">
-        <button />Select all</button>
-        <input class="new_task" placeholder="What needs to be done?" aria-label="New task text"/>
+        <button class="select-all"></button>
+        <input class="new_task-text" placeholder="What needs to be done?" aria-label="New task text"/>
       </div>
       <ul class="todo-app_task-list tasks">
         <li class="todo-app_task-item task-item">
-          <div class="task-item_view">
-            <input type="checkbox" class="task-item_status" aria-label="Completed task: HTML"/>
-            <span class="task-item_text">HTML </span>
-            <button class="task-item_delete">Delete</button>
-          </div>
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: HTML" id = "1"/>
+            <label class="task-item_status-custom" for="1"></label>
+            <span class="task-item_text">HTML</span>
+            <button class="task-item_delete"></button>
           <div class="task-item_edit" hidden ="hidden">
             <input type="text" class="task-item_input" value="HTML" aria-label="Edit task: HTML"/>
           </div>
         </li>
         <li class="todo-app_task-item task-item">
-          <div class="task-item_view">
-            <input type="checkbox" class="task-item_status" aria-label="Completed task: CSS"/>
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: CSS"id = "2"/>
+            <label class="task-item_status-custom" for="2"></label>
             <span class="task-item_text">CSS </span>
-            <button class="task-item_delete">Delete</button>
-          </div>
+            <button class="task-item_delete"></button>
           <div class="task-item_edit" hidden ="hidden">
             <input type="text" class="task1_input" value="CSS" aria-label="Edit task: CSS"/>
           </div>
         </li>
         <li class="todo-app_task-item task-item">
-          <div class="task-item_view">
-            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS"/>
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS" id = "3"/>
+            <label class="task-item_status-custom" for="3"></label>
             <span class="task-item_text">JS </span>
-            <button class="task-item_delete">Delete</button>
-          </div>
+            <button class="task-item_delete"></button>
           <div class="task-item_edit" hidden ="hidden">
             <input type="text" class="task-item_input" value="JS" aria-label="Edit task: JS"/>
           </div>
         </li>
         <li class="todo-app_task-item task-item">
-          <div class="task-item_view">
-            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS tools"/>
+            <input type="checkbox" class="task-item_status" aria-label="Completed task: JS tools" id = "4"/>
+            <label class="task-item_status-custom" for="4"></label>
             <span class="task-item_text">JS tools </span>
-            <button class="task-item_delete">Delete</button>
-          </div>
+            <button class="task-item_delete"></button>
           <div class="task-item_edit" hidden ="hidden">
             <input type="text" class="task-item_input" value="JS tools" aria-label="Edit task: JS tools"/>
           </div>
@@ -63,17 +64,23 @@
       <span class="action-panel_counter-active-tasks">4 items left</span>
       <span class="action-panel_view-mode view mode" role="radiogroup" aria-label="Select view mode">
         <label for="all" class="view-mode_label">
-          <input type="radio" class="view-mode_button" id="all" name="command" value="all" checked>All
+          <input type="radio" class="view-mode_button" id="all" name="command" value="all" checked>
+          <span class="view-mode_text">All</span>
         </label>
         <label for="active" class="view-mode_label">
-          <input type="radio" class="view-mode_button" id="active" name="command" value="active">Active
+          <input type="radio" class="view-mode_button" id="active" name="command" value="active">
+          <span class="view-mode_text">Active</span>
         </label>
         <label for="completed" class="view-mode_label">
-          <input type="radio" class="view-mode_button" id="completed" name="command" value="completed">Completed
+          <input type="radio" class="view-mode_button" id="completed" name="command" value="completed">
+          <span class="view-mode_text">Completed</span>
         </label>
       </span>
       <button class="view-mode_clear-completed" value="Clear completed">Clear completed</button>
     </footer>
   </main>
+  <div class="todo-app_first-bottom"></div>
+  <div class="todo-app_second-bottom"></div>
+  </div>
 </body>
 </html>
