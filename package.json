@@ -1,0 +1,26 @@
+{
+  "name": "ilgiz_duseev",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch scss -o css",
+    "watch": "parcel src/todos.html --open --no-cache --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2022/Duseev_Ilgiz.git"
+  },
+  "author": "\"Ilgiz Duseev\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2022/Duseev_Ilgiz/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2022/Duseev_Ilgiz#readme",
+  "devDependencies": {
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  }
+}
