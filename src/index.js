@@ -59,11 +59,11 @@ function unchecked() {
     let check = document.getElementsByTagName('input');
     for (let i = 0; i < check.length; i++) {
         if (check[i].type === 'checkbox') {
-            check[i].checked = false;
+            check[i].checked = !!check[i].checked;
         }
     }
     for (let i = 0; i < tasks.length; i++) {
-        tasks[i].isCompleted = false;
+        tasks[i].isCompleted = !tasks[i].isCompleted;
     }
     update();
 }
@@ -83,12 +83,8 @@ function addTask(e) {
     if (this.description.value) {
         const task = createTask(this.description.value)
         tasks.push(createLi(task));
-        if (!buttonActive.checked) {
-            selectAll();
-            unchecked();
-        } else {
-            unchecked();
-        }
+        unchecked();
+        unchecked();
         update();
     }
     this.reset();
