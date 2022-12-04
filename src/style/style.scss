@@ -89,6 +89,7 @@ input[type="checkbox"] {
     border: 1px solid #5DC2AF;
   }
 
+
   &:focus-visible + .task-item_status-custom {
     border: 1px solid #000;
   }
@@ -138,7 +139,7 @@ input[type="checkbox"] {
   align-self: center;
   font-size: 24px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 28px;
   text-align: left;
   color: #666666;
 }
@@ -210,7 +211,7 @@ input[type="radio"] {
   cursor: pointer;
   transition: 0.35s;
   background-color: #fff;
-  
+
   &:hover {
     background-color: #FAFAFA;
   }
